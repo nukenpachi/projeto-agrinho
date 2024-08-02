@@ -275,14 +275,16 @@ nav .close-icon{
     justify-content: space-between;
 }
 
-.sobre .sobre-text{
+.sobre .sobre-text {
    width: 50%;
    padding-right: 40px;
+   color: white;
 }
 
 .sobre .sobre-text p{
-    margin: 18px;
-    color: #0000009c;
+    margin: 15px;
+    font-size: 20px;
+    color: white;
 }
 
 .sobre .sobre-img{
@@ -296,7 +298,7 @@ nav .close-icon{
 
 /*end página sobre*/
 
-/*escolha de vegetais*/
+/*serviços*/
 
 .vegetais h3{
     text-align: center;
@@ -310,22 +312,38 @@ nav .close-icon{
     color: white;
 }
 
-.cards-vegetal{
+.vegetais .cards-vegetal{
     display: flex;
     justify-content: center;
+    margin-top: 20px;
+    flex-wrap: wrap;
 }
 
 .vegetais .card-vegetal{
     background-color: #1e601d;
-    margin: 15px;
+    width: 250px;
+    padding: 20px;
     border-radius: 14px;
     text-align: center;
-    width: 350px;
+    margin: 20px;
+    transition: 0.3s;
 }
 
+.vegetais .card-vegetal:hover{
+    background-color: #67b965;
+}
+
+.vegetais .card-vegetal:hover p{
+    color:#0000009c;
+}
+
+.vegetais .card-vegetal p.nome-v{
+    margin: 5px 0;
+    transition: 0.3s;
+}
 .vegetais .card-vegetal img{
     border-radius: 10%;
-    width: 80px;
+    width: 100px;
     display: block;
     margin: 10px auto;
 }
@@ -336,8 +354,201 @@ nav .close-icon{
     margin-bottom: 0 15px;
 }
 
+/* Modal */
+.modal {
+    display: none; /* Inicialmente escondido */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+    padding-top: 60px;
+}
 
-/*end escolha de vegetais*/
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    text-align: center;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Ícone do Carrinho */
+.cart-icon {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    font-size: 2em;
+    cursor: pointer;
+    z-index: 1000;
+    background-color: #f1c40f;
+    padding: 10px;
+    border-radius: 100%;
+    color: white;
+}
+
+.cart-count {
+    font-size: 0.5em;
+    color: black;
+    background-color: white;
+    border-radius: 80%;
+    padding: 2px 5px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(50%, -50%);
+}
+
+.cart-items {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.cart-items li {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cart-items li:last-child {
+    border-bottom: none;
+}
+
+.quantity-controls {
+    display: flex;
+    align-items: center;
+}
+
+.quantity-controls button {
+    background-color: #f1c40f;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    margin: 0 5px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.quantity-controls button:hover {
+    background-color: #d4ac0d;
+}
+
+.modal .modal-content{
+    background-color:#1e601d;
+    border: none;
+}
+.modal .modal-content .cart-items{
+    color: #ffffff;
+   
+}
+
+.modal .modal-content h3{
+    color: white;
+}
+
+.modal .modal-content .continuar-comprando,
+.modal .modal-content .finalizar-compra{
+     background-color:#d4ac0d;
+     color: white;
+     border: none;
+}
+
+/*end serviços*/
+
+/*pagina de contato*/
+
+.contato-info{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    color: white;
+}
+
+.contato-info .left-side p{
+    color: white;
+    font-size: 17px;
+}
+
+.contato-info .left-side{
+    width: 50%;
+    padding: 30px;
+    background-color:#30692f;
+    border-radius: 14px;
+    margin-right: 50px;   
+    height: fit-content;
+}
+
+.contato-info .left-side div{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.contato-info .left-side div i{
+    font-size: 24px;
+    margin-right: 20px;
+}
+
+.contato-info .right-side{
+    width: 50%;
+}
+
+.contato-info .right-side input{
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    height: 47px;
+    padding: 15px;
+    border-radius: 9px;
+    transition: 0.3s;
+    border: 1px solid #1c5c0c;
+    color: rgb(22, 21, 3);
+    font-weight: lighter;
+}
+
+.contato-info .right-side input:focus,
+.contato-info .right-side textarea:focus{
+   border-color:#f2ff00;
+}
+
+
+.contato-info .right-side textarea{
+    border: 1px solid #67b965;
+    color: rgb(22, 21, 3);
+    border-radius: 9px;
+    margin-bottom: 10px;
+    padding: 15px;
+    width: 100%;
+    transition: 0.3s;
+    resize: none;
+}
+
+.contato-info .right-side button{
+    border: none;
+}
 
 @media(max-width: 830px){
 

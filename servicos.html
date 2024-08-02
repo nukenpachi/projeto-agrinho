@@ -3,88 +3,153 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--font awesome-->
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!--link css-->
+    <!-- Link CSS -->
     <link rel="stylesheet" href="style.css">
-    <title>Sobre nosso projeto</title>
+    <title>Serviços</title>
 </head>
 <body>
 
-    
-<!--escolha dos vegetais-->
- <section class="vegetais">
-    <div class="conteiner">
-        <h3>Escolha de vegetais</h3>
-        <p>selecione as sementes que tem interesse</p>
-        <div class="cards-vegetal">
+    <!-- Ícone do Carrinho -->
+    <div id="cart-icon" class="cart-icon" style="display: none;" onclick="openCart()">
+        <i class="fa fa-shopping-cart"></i>
+        <span id="cart-count" class="cart-count">0</span> <!-- Contador de itens no carrinho -->
+    </div>
 
-    <!--card vegetal 1-->
-      <div class="card-vegetal">
-        <img src="imagens/vegetais/tomate.jpg" alt="Tomate">
-        <p class="nome-v">Tomate</p>
-        <a href="servicos.html" class="btn">Começar agora</a>
-      </div>
-      <!--fim card vegetal 1-->
-      
-      <!--card vegetal 2-->
-      <div class="card-vegetal">
-          <img src="imagens/vegetais/alface.jpg" alt="Alface">
-          <p class="nome-v">Alface</p>
-          <a href="servicos.html" class="btn">Começar agora</a>
+    <!-- Container -->
+    <header style="background-image: url('fundo-servico.jpg');">
+        <div class="conteiner">
+            <nav>
+                <a href="index.html">
+                    <img src="#" alt="logo">
+                </a>
+                <ul class="ul">
+                    <a href="index.html">Home</a>
+                    <a href="sobre.html">Sobre</a>
+                    <a href="servicos.html">Serviços</a>
+                    <a class="btn" href="contacto.html">Contato</a>
+                    <div class="close-icon" onclick="closeMenu()">
+                        <i class="fa fa-times-circle"></i>
+                    </div>
+                </ul>
+                <div class="menu-icon" onclick="openMenu()">
+                    <i class="fa fa-bars"></i>
+                </div>
+            </nav>
+            <section class="banner">
+                <div class="banner-text">
+                    <h1>Serviços</h1>
+                </div>
+            </section>
         </div>
-    <!--fim card vegetal 2-->
-    
-    <!--card vegetal 3-->
-    <div class="card-vegetal">
-        <img src="imagens/vegetais/tomate.jpg" alt="Cenora">
-        <p class="nome-v">Cenora</p>
-        <a href="servicos.html" class="btn">Começar agora</a>
+    </header>
+    <!-- Fim do Container -->
+
+    <!-- Escolha dos Vegetais -->
+    <section class="vegetais">
+        <div class="conteiner">
+            <h3>Escolha de vegetais</h3>
+            <p>selecione as sementes que tem interesse</p>
+            <div class="cards-vegetal">
+
+                <!-- Card vegetal 1 -->
+                <div class="card-vegetal">
+                    <img src="tomate.jpg" alt="Tomate">
+                    <p class="nome-v"><strong>Tomate</strong></p>
+                    <button class="btn" data-vegetal="Tomate">Adicionar a lista</button>
+                </div>
+                <!-- Fim Card vegetal 1 -->
+
+                <!-- Card vegetal 2 -->
+                <div class="card-vegetal">
+                    <img src="alface.jpg" alt="Alface">
+                    <p class="nome-v"><strong>Alface</strong></p>
+                    <button class="btn" data-vegetal="Alface">Adicionar a lista</button>
+                </div>
+                <!-- Fim Card vegetal 2 -->
+
+                <!-- Card vegetal 3 -->
+                <div class="card-vegetal">
+                    <img src="cenora.jpg" alt="Cenora">
+                    <p class="nome-v"><strong>Cenora</strong></p>
+                    <button class="btn" data-vegetal="Cenora">Adicionar a lista</button>
+                </div>
+                <!-- Fim Card vegetal 3 -->
+
+                <!-- Card vegetal 4 -->
+                <div class="card-vegetal">
+                    <img src="couve-flor.jpg" alt="Couve-flor">
+                    <p class="nome-v"><strong>Couve-flor</strong></p>
+                    <button class="btn" data-vegetal="Couve-flor">Adicionar a lista</button>
+                </div>
+                <!-- Fim Card vegetal 4 -->
+
+                <!-- Card vegetal 5 -->
+                <div class="card-vegetal">
+                    <img src="brocolis.jpg" alt="Brócolis">
+                    <p class="nome-v"><strong>Brócolis</strong></p>
+                    <button class="btn" data-vegetal="Brócolis">Adicionar a lista</button>
+                </div>
+                <!-- Fim Card vegetal 5 -->
+
+                <!-- Card vegetal 6 -->
+                <div class="card-vegetal">
+                    <img src="cebola.jpg" alt="Cebola">
+                    <p class="nome-v"><strong>Cebola</strong></p>
+                    <button class="btn" data-vegetal="Cebola">Adicionar a lista</button>
+                </div>
+                <!-- Fim Card vegetal 6 -->
+
+                <!-- Card vegetal 7 -->
+                <div class="card-vegetal">
+                    <img src="pimentao.jpg" alt="Pimentão">
+                    <p class="nome-v"><strong>Pimentão</strong></p>
+                    <button class="btn" data-vegetal="Pimentão">Adicionar a lista</button>
+                </div>
+                <!-- Fim Card vegetal 7 -->
+
+                <!-- Card vegetal 8 -->
+                <div class="card-vegetal">
+                    <img src="repolho.jpg" alt="Repolho">
+                    <p class="nome-v"><strong>Repolho</strong></p>
+                    <button class="btn" data-vegetal="Repolho">Adicionar a lista</button>
+                </div>
+                <!-- Fim Card vegetal 8 -->
+
+            </div>
+        </div>
+    </section>
+    <!-- Fim da Escolha dos Vegetais -->
+
+    <!-- Modal para mostrar mensagens de confirmação -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h3>Itens no Carrinho</h3>
+            <ul id="cart-items" class="cart-items">
+                <!-- Lista de itens será gerada aqui -->
+            </ul>
+            <button id="continuar-comprando" onclick="closeModal()">Continuar Comprando</button>
+            <button id="finalizar-compra">Finalizar Compra</button>
+        </div>
     </div>
-<!--fim card vegetal 3-->
+    <!-- Fim do Modal -->
 
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="links">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-instagram"></i></a>
+                <a href="#"><i class="fa fa-github"></i></a>
+                <a href="#"><i class="fa fa-whatsapp"></i></a>
+            </div>
+            <p>Desenvolvido por Luana Kuiavski</p>
+        </div>
+    </footer>
+    <!-- Fim do Footer -->
 
-<!--card vegetal 4-->
-<div class="card-vegetal">
-    <img src="imagens/vegetais/tomate.jpg" alt="nome doq seja">
-    <p class="nome-v">nome do vegetal</p>
-    <a href="servicos.html" class="btn">Começar agora</a>
-</div>
-<!--fim card vegetal 4-->
-
-
-<!--card vegetal 5-->
-<div class="card-vegetal">
-    <img src="imagens/vegetais/tomate.jpg" alt="nome doq seja">
-    <p class="nome-v">nome do vegetal</p>
-    <a href="servicos.html" class="btn">Começar agora</a>
-</div>
-    <!--fim card vegetal 5-->
-    
-    <!--card vegetal 6-->
-    <div class="card-vegetal">
-        <img src="imagens/vegetais/tomate.jpg" alt="nome doq seja">
-        <p class="nome-v">nome do vegetal</p>
-        <a href="servicos.html" class="btn">Começar agora</a>
-    </div>
-<!--fim card vegetal 6-->
-
-<!--card vegetal 7-->
-<div class="card-vegetal">
-    <img src="imagens/vegetais/tomate.jpg" alt="nome doq seja">
-    <p class="nome-v">nome do vegetal</p>
-    <a href="servicos.html" class="btn">Começar agora</a>
-</div>
-<!--fim card vegetal 7-->
-
-<!--card vegetal 8-->
-<div class="card-vegetal">
-    <img src="imagens/vegetais/tomate.jpg" alt="nome doq seja">
-    <p class="nome-v">nome do vegetal</p>
-    <a href="servicos.html" class="btn">Começar agora</a>
-</div>
-<!--fim card vegetal 8-->
-</div>
-</section>
-<!--fim da escolha dos vegetais-->
+    <script src="main.js"></script>
 </body>
+</html>
